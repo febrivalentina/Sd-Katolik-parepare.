@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>SD Katolik Parepare</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+    }
+
+    /* NAVBAR */
+    nav {
+      background: rgba(0,0,0,0.65);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      width: 35px;
+      height: 35px;
+    }
+
+    .menu a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .menu a:hover {
+      text-decoration: underline;
+    }
+
+    /* HEADER */
+    header {
+      background: url('1.jpeg') center/cover no-repeat;
+      height: 320px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    header h1 {
+      background: rgba(0,0,0,0.5);
+      padding: 20px 30px;
+      border-radius: 10px;
+    }
+
+    /* SECTION */
+    section {
+      background: white;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      display: none;
+      line-height: 1.6;
+    }
+
+    section img {
+      width: 320px;
+      display: block;
+      margin: 15px auto;
+      border-radius: 8px;
+    }
+
+    footer {
+      background: #ddd;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">
+      <img src="logo SD.jpeg" alt="Logo SD Katolik Parepare">
+      <strong>SDN 478 BAROWA</strong>
+    </div>
+
+    <div class="menu">
+      <a onclick="showSection('home')">Home</a>
+      <a onclick="showSection('profil')">Profil</a>
+      <a onclick="showSection('ekstrakulikuler')">Ekstrakulikuler</a>
+      <a onclick="showSection('fasilitas')">Fasilitas</a>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header>
+    <h1>SD KATOLIK PAREPARE</h1>
+  </header>
+
+  <!-- HOME -->
+  <section id="home">
+    <h2>Home</h2>
+    <p>
+      Selamat datang di website resmi SD KATOLIK PAREPARE.
+      Website ini menyajikan informasi mengenai profil sekolah,
+      kelas, serta berbagai kegiatan yang dilaksanakan oleh
+      SD Katolik Parepare.
+    </p>
+  </section>
+
+  <!-- PROFIL -->
+  <section id="profil">
+    <h2>Profil Sekolah</h2>
+    <img src="2.jpeg" alt="Profil SD Katolik Parepare">
+
+    <p>
+      SD Katolik Parepare, adalah sebuah jenjang pendidikan Formal Swasta berakreditasi B, yang terletak di Kelurahan Malusetasi, Kecamatan Ujung Kota Parepare. SD ini dibangun pada tahun 1953 dan  pada saat ini SD tersebut dinahkodai oleh Klemens Kari Kolin,S.Pd. SD.
+Sudah banyak peserta didik yang telah ditelorkannya. Bahkan ada yang menjadi pejabat teras di Nusantara ini. SD Katolik pada saat ini kelihatannya jalan di tempat. Namun tidak bisa kita pungkiri akan torehan sejarah dalam kancah dunia pendidikan Parepare pada tahun-tahun sebelumnya.
+Oleh karena itu supaya sejarah itu bisa terulang kembali, maka SD Katolik Parepare memulai suatu strategi baru, pelan tapi pasti
+    
+    </p>
+  </section>
+
+  <!-- EKSTRAKULIKULER -->
+  <section id="ekstrakulikuler">
+    <h2>Ekstrakulikuler</h2>
+    <img src="3.jpeg" alt="Ekstrakulikuler SD Katolik Parepare">
+
+    <p>
+      Informasi spesifik mengenai daftar kalimat atau deskripsi ekstrakurikuler di SD Katolik Parepare secara mendetail tidak tersedia dalam sumber publik terkini. Namun, berdasarkan profil umum sekolah dan kegiatan rutin yang dilaporkan, berikut adalah poin-poin yang dapat digunakan untuk menyusun kalimat terkait ekstrakurikuler di sana:
+Kegiatan Keagamaan: Sekolah ini memiliki rutinitas ibadah pagi yang kuat untuk membentuk karakter religius siswa. Kalimat yang bisa digunakan: "Siswa mengikuti rutinitas ibadah pagi sebagai bagian dari pembentukan karakter spiritual di sekolah."
+Pramuka & Seni: Secara umum, sekolah dasar di bawah naungan yayasan Katolik sering menyelenggarakan ekstrakurikuler wajib seperti Pramuka serta kegiatan seni seperti Paduan Suara dan Seni Tari.
+    </p>
+
+  </section>
+
+  <!-- FASILITAS -->
+  <section id="Fasilitas">
+    <h2>Fasilitas</h2>
+    <img src="4.jpeg" alt="Fasilitas SD Katolik Parepare">
+
+    <p>
+      SD Katolik di Parepare umumnya dilengkapi fasilitas penunjang pendidikan yang lengkap dan nyaman, meliputi ruang kelas yang kondusif, perpustakaan, sarana ibadah, serta lapangan olahraga untuk menunjang tumbuh kembang siswa.
+    
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2026 SD Katolik Parepare</p>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    function showSection(id) {
+      let sections = document.querySelectorAll("section");
+      sections.forEach(sec => sec.style.display = "none");
+      document.getElementById(id).style.display = "block";
+    }
+
+    // tampilkan home saat pertama dibuka
+    showSection("home");
+  </script>
+
+</body>
+</html>
